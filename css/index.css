@@ -42,3 +42,18 @@
   src: url(../fonts/noto-sans-jp/NotoSansJP-Regular.otf);
   font-weight: normal;
 }
+:root {
+  --background-color: #210002;
+  ---primary-text-color: #ffaf00;
+  --secondary-text-color: #973700;
+  --header-bg-color-hover: #7e0030;
+  --header-bg-color-active: #a34300;
+  --cta-btn-bg-color: #ffaf00;
+  --cta-btn-bg-color-hover: #ffff;
+  --cta-btn-text-color: #210002;
+  --btn-bg-color: #973700;
+  --btn-bg-color-hover: #ffaf00;
+  --primary-font-family: Verlag;
+  --header-font-family: "Futura";
+  --jp-font-family: Noto Sans JP;
+}
