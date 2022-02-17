@@ -1,0 +1,155 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/futura/FuturaLT-Bold.woff2") format("woff2"),
+    url("../fonts/futura/FuturaLT-Bold.woff") format("woff"),
+    url("../fonts/futura/FuturaLT-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Black.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Light.ttf);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Bold.otf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Medium.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Regular.otf);
+  font-weight: normal;
+}
+:root {
+  --background-color: #210002;
+  ---primary-text-color: #ffaf00;
+  --secondary-text-color: #973700;
+  --header-bg-color-hover: #7e0030;
+  --header-bg-color-active: #a34300;
+  --cta-btn-bg-color: #ffaf00;
+  --cta-btn-bg-color-hover: #ffff;
+  --cta-btn-text-color: #210002;
+  --btn-bg-color: #973700;
+  --btn-bg-color-hover: #ffaf00;
+  --primary-font-family: Verlag;
+  --header-font-family: "Futura";
+  --jp-font-family: Noto Sans JP;
+}
+
+.body {
+  font-family: var(--primary-font-family);
+  overflow-x: hidden;
+}
+
+/* HEADER */
+.header {
+  font-family: var(--header-font-family);
+  text-transform: uppercase;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color);
+  color: var(---primary-text-color);
+}
+.header__menu-icon {
+  cursor: pointer;
+  transition: all 0.9s;
+}
+.header__nav {
+  width: min(90%, 1024px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav-list {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: transparent;
+  color: transparent;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  font-size: 2em;
+}
+.header__nav-list.active {
+  position: fixed;
+  top: 40px;
+  left: 0;
+  background-color: var(--background-color);
+  color: var(---primary-text-color);
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.6rem;
+  font-size: 2em;
+}
+.header__nav-list-link {
+  transition: all 0.1s;
+}
+
+.header__nav-list-link:hover {
+  background-color: var(--header-bg-color-hover);
+  padding: 1rem 2rem;
+}
+.header__nav-list-link--active {
+  background-color: var(--header-bg-color-active);
+  padding: 1rem 2rem;
+}
+.header__nav-list-link--active:hover {
+  background-color: var(--header-bg-color-active);
+}
+/* MAIN */
+.main {
+  padding-top: 2rem;
+}
+/* PARALLAX */
+.parallax__desktop-container-image {
+  display: none;
+}
+.parallax__mobile-container-image {
+  height: 100vh;
+}
+.parallax__mobile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
