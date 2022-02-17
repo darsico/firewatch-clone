@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/futura/FuturaLT-Bold.woff2") format("woff2"),
+    url("../fonts/futura/FuturaLT-Bold.woff") format("woff"),
+    url("../fonts/futura/FuturaLT-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Black.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Bold.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Regular.otf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: Verlag;
+  src: url(../fonts/verlag/Verlag-Light.ttf);
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Bold.otf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Medium.otf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: Noto Sans JP;
+  src: url(../fonts/noto-sans-jp/NotoSansJP-Regular.otf);
+  font-weight: normal;
+}
