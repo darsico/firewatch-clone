@@ -583,6 +583,40 @@ html {
   background-color: var(--btn-bg-color);
 }
 
+.footer__signature {
+  position: fixed;
+  left: 40px;
+  bottom: 35px;
+  font-size: 0.95em;
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  background-blend-mode: difference;
+  z-index: 999;
+  font-weight: normal;
+}
+.footer__signature--bold {
+  font-weight: bolder;
+}
+
+.footer__signature-icon {
+  width: 0.9rem;
+  animation: alive 2s infinite ease;
+}
+@keyframes alive {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @media (min-width: 1024px) {
   .header__menu-icon-container {
     display: none;
