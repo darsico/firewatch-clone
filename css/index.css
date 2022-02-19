@@ -58,6 +58,10 @@
   --jp-font-family: Noto Sans JP;
 }
 
+* {
+  box-sizing: content-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -73,7 +77,7 @@ html {
   font-family: var(--header-font-family);
   text-transform: uppercase;
   width: 100%;
-  height: 40px;
+  height: 53px;
   display: flex;
   align-items: center;
   position: fixed;
@@ -82,6 +86,7 @@ html {
   background-color: var(--background-color);
   color: var(---primary-text-color);
   z-index: 99;
+  overflow: hidden;
 }
 .header__menu-icon {
   cursor: pointer;
@@ -93,6 +98,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 .header__nav-list {
   position: fixed;
@@ -132,18 +138,11 @@ html {
 .header__nav-list-link {
   transition: all 0.1s;
 }
+.header__nav-list-item--active {
+  background-color: var(--header-bg-color-active);
+  padding: 0.4rem 1rem;
+}
 
-.header__nav-list-link:hover {
-  background-color: var(--header-bg-color-hover);
-  padding: 1rem 2rem;
-}
-.header__nav-list-link--active {
-  background-color: var(--header-bg-color-active);
-  padding: 1rem 2rem;
-}
-.header__nav-list-link--active:hover {
-  background-color: var(--header-bg-color-active);
-}
 /* MAIN */
 .main {
   padding-top: 2rem;
@@ -291,9 +290,9 @@ html {
   width: 350px;
 }
 .buy__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
   gap: 2rem;
   color: var(--cta-btn-text-color);
   font-size: 1.1em;
@@ -343,16 +342,15 @@ html {
 /* DESCRIPTION SECTION */
 
 .description {
-  width: min(90%, 1024px);
+  width: min(90%, 800px);
   margin: 0 auto;
   padding: 4rem 0 2rem 0;
 }
 
 .description__container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
   line-height: 1.8rem;
   font-size: 1.2em;
 }
@@ -366,8 +364,8 @@ html {
 /* INTERLINK SECTION */
 .interlink {
   color: var(--cta-btn-text-color);
-  width: min(90%, 1024px);
-  padding: 4rem 0;
+  width: min(90%, 800px);
+  padding: 1rem 0;
   font-size: 1.1em;
   letter-spacing: 0.2rem;
   font-weight: bold;
@@ -377,14 +375,16 @@ html {
 
 .interlink__list {
   margin: 0 auto;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  display: grid;
+  width: min(90%, 800px);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
   gap: 2rem;
 }
 
 .interlink__list-item {
   width: 250px;
+  margin: 0 auto;
   clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
   background-color: var(--btn-bg-color);
   display: flex;
@@ -420,6 +420,8 @@ html {
 
 .screenshots__list-item-image {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* PRESSQUOTE SECTION */
@@ -467,33 +469,40 @@ html {
 .tech-support__list-item {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: min(100%, 300px);
-  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
-  background-color: var(--btn-bg-color);
-  padding: 0.3rem 0.5rem;
-  cursor: pointer;
+
   margin: 0 auto;
   transition: all 0.5s;
-}
-.tech-support__list-item:hover {
-  background-color: var(--btn-bg-color-hover);
 }
 
 .tech-support__list {
   width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem 0;
 }
 .tech-support__list-item-title {
-  width: fit-content;
+  width: 100%;
+  height: fit-content;
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--btn-bg-color);
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
   text-align: center;
   font-size: 1.1em;
   font-weight: bold;
   letter-spacing: 0.1em;
   color: var(--cta-btn-text-color);
+  transition: all 0.5s;
+}
+.tech-support__list-item-title:hover {
+  background-color: var(--btn-bg-color-hover);
 }
 
 .tech-support__list-item--jp {
@@ -509,14 +518,22 @@ html {
 }
 
 /* FOOTER */
-.footer {
+.footer__container {
   margin: 0 auto;
   width: min(90%, 1024px);
-  padding: 2rem 0;
+  padding: 2rem 0 6rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   gap: 4rem;
+}
+.footer {
+  width: 100%;
+}
+.footer__decoration {
+  width: 100%;
+  height: 120px;
+  background-color: #ffaf00;
 }
 
 .footer__copyright {
@@ -559,4 +576,91 @@ html {
   height: 69px;
   width: 125px;
   background-image: url("../images/logo_camposanto_transparent.png");
+}
+.footer__decoration {
+  width: 100%;
+  height: 30px;
+  background-color: var(--btn-bg-color);
+}
+
+@media (min-width: 1024px) {
+  .header__menu-icon-container {
+    display: none;
+  }
+  .header__nav-list {
+    position: static;
+    color: var(---primary-text-color);
+    opacity: 1;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: row;
+    gap: 0;
+    font-size: 1em;
+    height: 100%;
+  }
+
+  .header__nav-list-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .header__nav-list-item {
+    height: 100%;
+    padding: 0 1.5rem;
+  }
+  .header__nav-list-item:hover {
+    background-color: #7e0030;
+  }
+  .buy__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .screenshots__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .grid-1 {
+    grid-column: 1 / 3;
+  }
+
+  .grid-4 {
+    grid-column: 2 / 4;
+  }
+
+  .description__container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 2fr;
+    gap: 1rem;
+  }
+  .description__heading {
+    grid-column: 1/4;
+  }
+  .description__heading {
+    margin-bottom: 0;
+  }
+
+  .interlink__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+  }
+
+  .tech-support__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 68px 1fr;
+    background-image: url("../images/firewatch_shield_small.png");
+    background-size: 7% 50%;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+  .tech-support__list-item--jp {
+    grid-column: 1/3;
+    grid-row: 2/3;
+    font-size: 2em;
+  }
+  .footer__copyright {
+    width: 450px;
+    font-size: 1em;
+  }
 }

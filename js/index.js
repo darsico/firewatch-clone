@@ -3,15 +3,7 @@ const nav = document.querySelector("#nav");
 const menuIcon = document.getElementById("menu-icon");
 const menuImg = "./images/menu.svg";
 const closeImg = "./images/x.svg";
-
-//Mobile Menu function
-const show = () => {
-  let active = nav.classList.toggle("active");
-
-  active ? (menuIcon.src = closeImg) : (menuIcon.src = menuImg);
-};
-menuIcon.addEventListener("click", show);
-
+// Parallax variables
 const parallax0 = document.getElementById("parallax0");
 const parallax1 = document.getElementById("parallax1");
 const parallax2 = document.getElementById("parallax2");
@@ -22,6 +14,15 @@ const parallax6 = document.getElementById("parallax6");
 const parallax7 = document.getElementById("parallax7");
 const parallax8 = document.getElementById("parallax8");
 
+//Mobile Menu function
+const show = () => {
+  let active = nav.classList.toggle("active");
+
+  active ? (menuIcon.src = closeImg) : (menuIcon.src = menuImg);
+};
+menuIcon.addEventListener("click", show);
+
+// Parallax functionality
 window.onscroll = function () {
   const winScroll = window.scrollY;
 

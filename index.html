@@ -14,7 +14,7 @@
         <a href="" class="header__nav-logo">
           <b>Campo Santo</b>
         </a>
-        <figure>
+        <figure class="header__menu-icon-container">
           <img
             id="menu-icon"
             class="header__menu-icon"
@@ -23,7 +23,7 @@
           />
         </figure>
         <ul class="header__nav-list" id="nav">
-          <li class="header__nav-list-item">
+          <li class="header__nav-list-item header__nav-list-item--active">
             <a
               href=""
               class="header__nav-list-link header__nav-list-link--active"
@@ -169,7 +169,7 @@
       </section>
       <section class="screenshots">
         <ul class="screenshots__list">
-          <li class="screenshots__list-item">
+          <li class="screenshots__list-item grid-1">
             <a class="screenshots__list-item-link" href="">
               <img
                 class="screenshots__list-item-image"
@@ -178,7 +178,7 @@
               />
             </a>
           </li>
-          <li class="screenshots__list-item">
+          <li class="screenshots__list-item grid-2">
             <a class="screenshots__list-item-link" href="">
               <img
                 class="screenshots__list-item-image"
@@ -187,7 +187,7 @@
               />
             </a>
           </li>
-          <li class="screenshots__list-item">
+          <li class="screenshots__list-item grid-3">
             <a class="screenshots__list-item-link" href="">
               <img
                 class="screenshots__list-item-image"
@@ -196,7 +196,7 @@
               />
             </a>
           </li>
-          <li class="screenshots__list-item">
+          <li class="screenshots__list-item grid-4">
             <a class="screenshots__list-item-link" href="">
               <img
                 class="screenshots__list-item-image"
@@ -217,7 +217,9 @@
       </section>
       <section class="tech-support">
         <ul class="tech-support__list">
-          <li class="tech-support__list-item">
+          <li
+            class="tech-support__list-item tech-support__list-item--tech-support"
+          >
             <h4 class="tech-support__list-item-title">
               <a class="tech-support__list-item-link" href="">Tech Support</a>
             </h4>
@@ -240,26 +242,31 @@
       </section>
     </main>
     <footer class="footer">
-      <p class="footer__copyright">
-        ©2022 CAMPO SANTO, IN COOPERATION WITH PANIC. FIREWATCH IS A TRADEMARK
-        OF CAMPO SANTO. NINTENDO SWITCH IS A TRADEMARK OF NINTENDO.
-      </p>
-      <nav class="footer__nav">
-        <ul class="footer__nav-list">
-          <li class="footer__nav-list-item">
-            <a class="footer__nav-list-item-link" href="">
-              <div class="footer__nav-list-item-image footer__item-panic"></div
-            ></a>
-          </li>
-          <li class="footer__nav-list-item">
-            <a class="footer__nav-list-item-link" href="">
-              <div
-                class="footer__nav-list-item-image footer__item-campo-santo"
-              ></div
-            ></a>
-          </li>
-        </ul>
-      </nav>
+      <div class="footer__container">
+        <p class="footer__copyright">
+          ©2022 CAMPO SANTO, IN COOPERATION WITH PANIC. FIREWATCH IS A TRADEMARK
+          OF CAMPO SANTO. NINTENDO SWITCH IS A TRADEMARK OF NINTENDO.
+        </p>
+        <nav class="footer__nav">
+          <ul class="footer__nav-list">
+            <li class="footer__nav-list-item">
+              <a class="footer__nav-list-item-link" href="">
+                <div
+                  class="footer__nav-list-item-image footer__item-panic"
+                ></div
+              ></a>
+            </li>
+            <li class="footer__nav-list-item">
+              <a class="footer__nav-list-item-link" href="">
+                <div
+                  class="footer__nav-list-item-image footer__item-campo-santo"
+                ></div
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="footer__decoration"></div>
     </footer>
     <script src="./js/index.js"></script>
   </body>
