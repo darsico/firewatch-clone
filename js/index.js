@@ -42,9 +42,9 @@ window.onscroll = function () {
   parallax1.style.transform = `translate(0, ${winScroll / 11.2}%)`;
   parallax2.style.transform = `translate(0, ${winScroll / 11}%)`;
   parallax3.style.transform = `translate(0, ${winScroll / 13.7}%)`;
-  parallax4.style.transform = `translate(0, ${winScroll / 14}%)`;
+  parallax4.style.transform = `translate(0, ${winScroll / 18}%)`;
   parallax5.style.transform = `translate(0, ${winScroll / 20}%)`;
-  parallax6.style.transform = `translate(0, ${winScroll / 50}%)`;
-  parallax7.style.transform = `translate(0, ${winScroll / -150}%) `;
+  parallax6.style.transform = `translate(0, ${winScroll / 28}%)`;
+  parallax7.style.transform = `translate(0, ${winScroll / -200}%) `;
   parallax8.style.transform = `translate(0, ${winScroll / 1500}%) `;
 };
