@@ -64,6 +64,8 @@ html {
 .body {
   font-family: var(--primary-font-family);
   overflow-x: hidden;
+  color: var(---primary-text-color);
+  background-color: #210002;
 }
 
 /* HEADER */
@@ -164,7 +166,6 @@ html {
   height: 130vh;
   overflow: hidden;
   background-color: #ffaf00;
-  /* z-index: -1; */
 }
 
 #parallax0 {
@@ -268,4 +269,72 @@ html {
   background-position: bottom;
   background-size: cover;
   z-index: 2;
+}
+
+/* BUY SECTION */
+
+.buy {
+  width: min(90%, 1024px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+.buy__title {
+  font-size: 2em;
+  text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 0.4rem;
+  width: 350px;
+}
+.buy__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--cta-btn-text-color);
+  font-size: 1.1em;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.buy__list-item {
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  background-color: var(--cta-btn-bg-color);
+  width: min(80%, 300px);
+  height: 50px;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.buy__list-item:hover {
+  background-color: var(--cta-btn-bg-color-hover);
+}
+
+.buy__list-item-link {
+  display: flex;
+  text-align: center;
+  align-items: start;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+.buy__list-item-link--nintendo {
+  width: 150px;
+}
+.buy__list-item-image {
+  width: 30px;
+  margin-top: 2px;
+}
+.buy__cta-video-container {
+  margin-top: 1rem;
+  width: 100%;
+  aspect-ratio: 2 / 1;
 }
