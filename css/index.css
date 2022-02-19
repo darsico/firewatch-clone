@@ -58,9 +58,14 @@
   --jp-font-family: Noto Sans JP;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 .body {
   font-family: var(--primary-font-family);
   overflow-x: hidden;
+  color: var(---primary-text-color);
+  background-color: #210002;
 }
 
 /* HEADER */
@@ -76,6 +81,7 @@
   left: 0;
   background-color: var(--background-color);
   color: var(---primary-text-color);
+  z-index: 99;
 }
 .header__menu-icon {
   cursor: pointer;
@@ -121,6 +127,7 @@
   flex-direction: column;
   gap: 2.6rem;
   font-size: 2em;
+  z-index: 50;
 }
 .header__nav-list-link {
   transition: all 0.1s;
@@ -141,15 +148,415 @@
 .main {
   padding-top: 2rem;
 }
-/* PARALLAX */
-.parallax__desktop-container-image {
-  display: none;
-}
+/* PARALLAX SECTION */
 .parallax__mobile-container-image {
-  height: 100vh;
+  display: none;
+  height: 150vh;
 }
 .parallax__mobile-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Parallax effect */
+.parallax__container {
+  position: relative;
+  width: 100%;
+  height: 130vh;
+  overflow: hidden;
+  background-color: #ffaf00;
+}
+
+#parallax0 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax0.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position-x: center;
+  background-position-y: 150px;
+}
+#parallax1 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax2 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax3 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax3.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax4 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax4.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax5 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax6 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax6.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+#parallax7 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax7.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+}
+#parallax8 {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../images/parallax/parallax8.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  z-index: 2;
+}
+
+/* BUY SECTION */
+
+.buy {
+  width: min(90%, 1024px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem 0;
+  gap: 2rem;
+}
+.buy__title {
+  font-size: 2em;
+  text-align: center;
+  line-height: 2.5rem;
+  letter-spacing: 0.4rem;
+  width: 350px;
+}
+.buy__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  color: var(--cta-btn-text-color);
+  font-size: 1.1em;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.buy__list-item {
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  background-color: var(--cta-btn-bg-color);
+  width: min(80%, 300px);
+  height: 50px;
+  margin: 0 auto;
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s;
+}
+.buy__list-item:hover {
+  background-color: var(--cta-btn-bg-color-hover);
+}
+
+.buy__list-item-link {
+  display: flex;
+  text-align: center;
+  align-items: start;
+  justify-content: center;
+  gap: 0.7rem;
+  width: 90%;
+  margin: 0 auto;
+  line-height: 1.5rem;
+}
+.buy__list-item-link--nintendo {
+  width: 150px;
+}
+.buy__list-item-image {
+  width: 30px;
+  margin-top: 2px;
+}
+.buy__cta-video-container {
+  margin-top: 1rem;
+  width: 100%;
+  aspect-ratio: 2 / 1;
+}
+
+/* DESCRIPTION SECTION */
+
+.description {
+  width: min(90%, 1024px);
+  margin: 0 auto;
+  padding: 4rem 0 2rem 0;
+}
+
+.description__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  line-height: 1.8rem;
+  font-size: 1.2em;
+}
+.description__heading {
+  font-size: 1.8em;
+  line-height: 2.8rem;
+  font-weight: bolder;
+  margin-bottom: 2rem;
+}
+
+/* INTERLINK SECTION */
+.interlink {
+  color: var(--cta-btn-text-color);
+  width: min(90%, 1024px);
+  padding: 4rem 0;
+  font-size: 1.1em;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.interlink__list {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.interlink__list-item {
+  width: 250px;
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  background-color: var(--btn-bg-color);
+  display: flex;
+  justify-content: center;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.interlink__list-item:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+.interlink__list-item-title {
+  width: fit-content;
+}
+
+/* SECTION SCREENSHOTS */
+
+.screenshots {
+  width: min(90%, 1024px);
+  padding: 4rem 0;
+  margin: 0 auto;
+}
+.screenshots__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+.screenshots__list-item {
+  justify-self: center;
+}
+
+.screenshots__list-item-image {
+  width: 100%;
+}
+
+/* PRESSQUOTE SECTION */
+
+.pressquote {
+  margin: 0 auto;
+  width: min(90%, 1024px);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.pressquote__quote {
+  text-align: center;
+  line-height: 3.5rem;
+  letter-spacing: 0.2rem;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  width: fit-content;
+  margin: 0 auto;
+}
+.pressquote__source {
+  text-align: center;
+  font-size: 1.1em;
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+}
+
+/* TECH SUPPORT */
+
+.tech-support {
+  margin: 0 auto;
+  width: min(90%, 1024px);
+  padding: 2rem 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tech-support__list-item {
+  display: flex;
+  justify-content: center;
+  width: min(100%, 300px);
+  clip-path: polygon(0 0, 100% 0, 97% 50%, 100% 100%, 0 100%, 3% 50%);
+  background-color: var(--btn-bg-color);
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: all 0.5s;
+}
+.tech-support__list-item:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+.tech-support__list {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+.tech-support__list-item-title {
+  width: fit-content;
+  text-align: center;
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: var(--cta-btn-text-color);
+}
+
+.tech-support__list-item--jp {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  letter-spacing: 0.3em;
+  transition: all 0.5s;
+}
+.tech-support__list-item--jp:hover {
+  color: var(--cta-btn-bg-color-hover);
+}
+
+/* FOOTER */
+.footer {
+  margin: 0 auto;
+  width: min(90%, 1024px);
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.footer__copyright {
+  width: 350px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.8em;
+  line-height: 1.8em;
+  color: var(--secondary-text-color);
+  font-weight: bold;
+}
+.footer__nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.footer__nav-list-item-image {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  position: relative;
+  background-color: var(--btn-bg-color);
+  transition: all 0.5s;
+}
+.footer__nav-list-item-image:hover {
+  background-color: var(--btn-bg-color-hover);
+}
+
+.footer__item-panic {
+  width: 62px;
+  height: 69px;
+  background-image: url("../images/logo_panic_transparent.png");
+}
+
+.footer__item-campo-santo {
+  height: 69px;
+  width: 125px;
+  background-image: url("../images/logo_camposanto_transparent.png");
 }
