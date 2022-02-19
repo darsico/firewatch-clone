@@ -22,20 +22,6 @@ const parallax6 = document.getElementById("parallax6");
 const parallax7 = document.getElementById("parallax7");
 const parallax8 = document.getElementById("parallax8");
 
-// window.addEventListener("scroll", () => {
-//   const value = window.scrollY;
-
-//   parallax0.style.top = value * 0 + "px";
-//   parallax1.style.top = -value * 0.15 + "px";
-//   parallax2.style.top = -value * 0.2 + "px";
-//   parallax3.style.top = -value * 0.25 + "px";
-//   parallax4.style.top = -value * 0.3 + "px";
-//   parallax5.style.top = -value * 0.35 + "px";
-//   parallax6.style.top = -value * 0.4 + "px";
-//   parallax7.style.top = -value * 0.5 + "px";
-//   parallax8.style.top = -value * 0.6 + "px";
-// });
-
 window.onscroll = function () {
   const winScroll = window.scrollY;
 
